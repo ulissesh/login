@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form id="criarLoginForm">
+        <h3>CRIE SEU USUÁRIO</h3>
+        <label id="createSuccessLabel" style="color: green; display: none;">Usuário criado com sucesso</label>
+        <label id="createErrorLabel" style="color: red; display: none;"></label>
+        <input type="text" placeholder="Username" id="login">
+        <input type="password" placeholder="Password" id="senha">
+        <input type="password" placeholder="Confirm Password" id="confirmSenha">
+        <button type="button" id="btn_submit" onclick="criarLogin()">Registre-se</button>
+        <button type="button" id="showPasswordBtn" onclick="mostrarSenha('senha')">Mostrar Senha</button>
+        
+        
+    </form>
+
+    <form id="loginForm" style="display: none;">
+        <h3>LOGIN</h3>
+        <label id="loginSuccessLabel" style="color: green; display: none;">Login efetudo com sucesso</label>
+        <label id="loginErrorLabel" style="color: rgb(231, 46, 46); display: none;">Usuário ou senha inválido.<br> 
+            Logue com os dados que foram criados.</label>
+        <input type="text" placeholder="Username" id="loginLogin">
+        <input type="password" placeholder="Password" id="senhaLogin">
+        <button type="button" id="btn_submit" onclick="realizarLogin()">Login</button>
+        <button type="button" id="btn_inicio" onclick="voltarAoInicio()">Início</button>
+        <button type="button" id="showLoginPasswordBtn" onclick="mostrarSenha('senhaLogin')">Mostrar Senha</button>
+        
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html> 
